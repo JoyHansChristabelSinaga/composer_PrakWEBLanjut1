@@ -1,5 +1,5 @@
-# composer_PrakWEBLanjut1
-Praktikum WEB Lanjut pertemuan 1
+# PrakWEBLanjut
+Praktikum WEB Lanjut
 
 
 Joy Hans Christabel 2017051050
