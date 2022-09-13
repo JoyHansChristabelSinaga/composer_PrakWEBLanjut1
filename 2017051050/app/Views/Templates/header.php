@@ -42,4 +42,5 @@
     </form>
   </div>
 </nav>
-    <h1><?= esc($title) ?></h1>
+    <h1 class = "mt-3 ml-4"> <?= esc($title) ?></h1>
+    <div class = "p-4">
