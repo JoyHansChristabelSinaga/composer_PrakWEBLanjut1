@@ -18,17 +18,13 @@ class MahasiswaController extends BaseController
             'mahasiswa' => $mahasiswa
         ];
 
-        return view('templates/header', $data)
-            . view('pages\list' , $data)
-            . view('templates/footer');
+        return view('pages\list' , $data);
     }
     public function create(){
         $data = [
             'title' => 'Create Mahasiswa'
         ];
-        return view('templates/header', $data)
-            . view('pages\create' , $data)
-            . view('templates/footer');
+        return view('pages\create' , $data);
 
     }
     public function store()
@@ -37,7 +33,8 @@ class MahasiswaController extends BaseController
         $data=[
             'NPM' => $this->request->getPost('NPM'),
             'Nama'=> $this->request->getPost('Nama'),
-            'Alamat'=>$this->request->getPost('Alamat')
+            'Alamat'=>$this->request->getPost('Alamat'),
+            'Deskripsi'=>$this->request->getPost('Deskripsi')
         ];
 
         $mahasiswaModel->save($data);
@@ -57,11 +54,10 @@ class MahasiswaController extends BaseController
         $mahasiswa = $mahasiswaModel->find($id);
 
         $data = [
-            'title' => ' Edit Mahasiswa'
+            'title' => ' Edit Mahasiswa',
+            'mahasiswa' => $mahasiswa
         ];
-        return view('templates/header', $data)
-            . view('pages/edit' , $mahasiswa)
-            . view('templates/footer');
+        return view('pages/edit', $data);
     }
     public function update($id)
     {
@@ -69,7 +65,8 @@ class MahasiswaController extends BaseController
         $data=[
             'NPM' => $this->request->getVar('NPM'),
             'Nama'=> $this->request->getVar('Nama'),
-            'Alamat'=>$this->request->getVar('Alamat')
+            'Alamat'=>$this->request->getVar('Alamat'),
+            'Deskripsi'=>$this->request->getVar('Deskripsi')
         ];
 
         $mahasiswaModel->update($id, $data);

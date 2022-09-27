@@ -1,2 +1,4 @@
-<hi>ini halaman home</hi>
-<p> yes.</p>
+<?= $this->extend('template')?>
+<?= $this->section('content')?>
+<hi>Welcome to HELL</hi>
+<?= $this->endSection()?>

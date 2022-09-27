@@ -1,2 +1,4 @@
-<hi>ini halaman about</hi>
-<p> yes.</p>
+<?= $this->extend('template')?>
+<?= $this->section('content')?>
+<hi>Ini untuk Praktikum Web Lanjut</hi>
+<?= $this->endSection()?>

@@ -9,7 +9,7 @@ class Mahasiswa extends Model
     protected $table            = 'mahasiswa';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $allowedFields    = ['NPM','Nama','Alamat'];
+    protected $allowedFields    = ['NPM','Nama','Alamat','Deskripsi'];
 
     // Dates
     protected $useTimestamps = true;

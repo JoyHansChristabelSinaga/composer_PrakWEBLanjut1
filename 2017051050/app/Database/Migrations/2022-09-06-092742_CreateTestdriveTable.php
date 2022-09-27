@@ -26,6 +26,9 @@ class CreateTestdriveTable extends Migration
             'Alamat' => [
                 'type' => 'TEXT',
             ],
+            'Deskripsi' => [
+                'type' => 'TEXT',
+            ],
             'created_at' => [
                 'type' => 'DATETIME',
                 'null' => true,
